@@ -15,6 +15,7 @@ class search_screen(MDScreen):
     pass
 
 class myApp(MDApp):
+
     def build(self):
         sm = ScreenManager()
         sm.add_widget(main_screen(name='main_s'))

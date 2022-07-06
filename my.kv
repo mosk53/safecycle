@@ -1,4 +1,5 @@
 #:kivy 2.1.0
+#: import SlideTransition kivy.uix.screenmanager.SlideTransition
 #button Font: Open Sans / Color: #15d798
 
 ScreenManager:
@@ -14,7 +15,9 @@ ScreenManager:
             size_hint: 0.4,0.2
             padding_top: 1
             pos_hint: {'center_y':0.6, 'center_x':0.5}
-            on_press: root.manager.current = 'search_s'
+            on_press: 
+                root.manager.current = 'search_s'
+                root.manager.transition = SlideTransition(direction="right")
             Image:
                 source: "/home/mosk/Desktop/code/safecycle/icons/glas.png"
                 allow_stretch:True
@@ -38,11 +41,20 @@ ScreenManager:
             pos_hint: {'center_y':0.5, 'center_x':0.5}
             hint_text: "Hier die ID"
             mode: "rectangle"
+            #onEnter action
+            #on_text_validate: app.root.
         MDFloatingActionButton:
             #size_hint: 0.4,0.2
             pos_hint: {'center_y':0.8, 'center_x':0.1}
-            on_press: root.manager.current = "main_s"
-
+            on_press: 
+                root.manager.current = "main_s"
+                root.manager.transition = SlideTransition(direction="left")
+        MDRectangleFlatButton:
+            text: "Senden"
+            pos_hint: {'center_y':0.39, 'center_x':0.5}
+            theme_text_color: "Custom"
+            text_color: 1, 0, 0, 1
+            line_color: 0, 0, 1, 1
 
             
 

@@ -35,7 +35,7 @@ ScreenManager:
             Button:
                 text: 'Login'
                 size_hint_y: 0.5
-                on_press: root.manager.current = 'booking_s'
+                on_press: root.manager.current = 'main_s'
             Button:
                 text: 'Register'
                 size_hint_y: 0.5
@@ -44,18 +44,29 @@ ScreenManager:
             text: 'Forgot Password?'
             size_hint_y: 0.5            
 
-<booking_screen>:
-    name: 'booking_screen'
-    BoxLayout:
-        RecycleView:
-            id: rv
-            viewclass: 'Button'
-            RecycleBoxLayout:
-                default_size: None, dp(56)
-                default_size_hint: 1, None
-                size_hint_y: None
-                height: self.minimum_height
-                orientation: 'vertical'
-        Button:
-            text: 'Logout'
-            on_press: root.manager.current = 'login_screen'
+<main_screen>:
+    name: 'main_s'
+    MDBottomNavigation:
+        MDBottomNavigationItem:
+            name: 'screen 1'
+            icon: 'account-hard-hat-outline'
+        MDBottomNavigationItem:
+            name: 'screen 2'
+            text: 'Plan'
+            icon: "floor-plan"
+            # scatter with free movability
+            Scatter:
+                do_translation: True
+                do_rotation: True
+                do_scale: True
+                # position in the center of the screen
+                pos: self.parent.center 
+                # size of the image
+                size: 500, 500
+                Image:
+                    source: 'test/bild.png'
+                    size: 500, 500
+        MDBottomNavigationItem:
+            name: 'screen 3'
+            icon: "chat-outline"
+            

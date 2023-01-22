@@ -6,7 +6,7 @@ from io import BytesIO
 db = mysql.connector.connect(
     host="192.168.178.35",
     user="mosk",
-    passwd="timo22769",
+    passwd="xxxx",
     database="db_app"
 )
 

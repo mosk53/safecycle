@@ -24,8 +24,7 @@ class main_screen(MDScreen):
 
 class RV(RecycleView):
     def __init__(self, rv_id, **kwargs):
-        super().__init__(**kwargs)
-
+        super().__init(**kwargs)
     pass
 
 

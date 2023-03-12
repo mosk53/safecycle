@@ -10,7 +10,7 @@ Please note that this app is still under development and there are currently no 
 
 1. Clone the repository:
 
-git clone https://github.com/your-username/bike-theft-check-app.git
+git clone https://github.com/mosk53/safecycle
 
 2. Install the required packages:
 

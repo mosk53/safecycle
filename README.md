@@ -10,15 +10,15 @@ Please note that this app is still under development and there are currently no 
 
 1. Clone the repository:
 
-git clone https://github.com/mosk53/safecycle
+''' git clone https://github.com/mosk53/safecycle '''
 
 2. Install the required packages:
 
-pip install -r requirements.txt
+''' pip install -r requirements.txt '''
 
 3. Run the app:
 
-python main.py
+''' python main.py '''
 
 ## Usage
 
